@@ -1,0 +1,31 @@
+
+<h1 [ngStyle]="{color: isAdmin ? 'red' : 'black' }"  >bonjour !</h1>
+<button>view</button>
+<button *ngIf="isAdmin" >edit</button>
+
+
+
+
+<ul>
+<li>pomme de terre</li>
+<li [ngStyle]="{backgroundColor: isThisIngredientVital ? 'red' : 'yellow' }" >raclette</li>
+<li [ngClass]="{'vital' : isThisIngredientVital}" >jambon-crû</li>
+<li [ngClass]="{'vital' : isThisIngredientVital}" >cornichon</li>
+<li>chou-fleur</li>
+</ul>
+<hr>
+<ul *ngIf="displayGuestList">
+<li>brenda</li>
+<li>dylan</li>
+<li>jean-mi</li>
+<li>kylie</li>
+</ul>
+
+<hr>
+<ul *ngFor="let song of songList">
+<li>
+  {{ song }}
+</li>
+
+</ul>
+
